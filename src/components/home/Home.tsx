@@ -17,8 +17,8 @@ const Home: React.FC = () => {
       >
        
         <div className="lg:mx-24 md:mx-14 flex flex-col gap-8 sm:gap-4 xs:gap-2 justify-between">
-          <h1 className="text-4xl text-white pt-7">Welcome!</h1>
-          <BookForm />
+          <h1 className="text-4xl text-white pt-7">Welcome Pacifique!</h1>
+          <BookForm2 />
         </div>
         <img
           src={man}

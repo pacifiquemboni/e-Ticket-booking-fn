@@ -29,16 +29,16 @@ const HomeNavBar: React.FC<HomeNavBarProps> = ({ scrollToAbout, scrollToRoutes, 
 
   return (
     <>
-      <div className="h-16 bg-primary flex items-center sticky top-0 z-50"> {/* Add sticky and z-index */}
+      <div className="h-24 lg:h-16 bg-primary flex items-center sticky top-0 z-50"> {/* Add sticky and z-index */}
         <div className="h-20 w-full px-4 lg:px-24 flex justify-between items-center">
           {/* Left side (logo and links) */}
           <div className="flex items-center gap-4 lg:gap-10">
-            <img src={logo} alt="logo" className="h-12 sm:h-14 ml-2 bg-white" />
+            <img src={logo} alt="logo" className="h-12 sm:h-14 ml-2 bg-white rounded" />
             <div className="hidden lg:flex items-center ml-4 space-x-4 text-white">
               <a href="#">Home</a>
-              <a href="#" onClick={scrollToAbout}>About</a>
-              <a href="#" onClick={scrollToRoutes}>Routes</a>
-              <a href="#" onClick={scrollToFaqs}>FAQs</a>
+              <a onClick={scrollToAbout} className='cursor-pointer'>About</a>
+              <a onClick={scrollToRoutes} className='cursor-pointer'>Routes</a>
+              <a onClick={scrollToFaqs} className='cursor-pointer'>FAQs</a>
             </div>
           </div>
 
@@ -47,21 +47,21 @@ const HomeNavBar: React.FC<HomeNavBarProps> = ({ scrollToAbout, scrollToRoutes, 
             <img
               src={notification}
               alt="notification"
-              className="h-6 sm:h-6 ml-2"
+              className="h-6 sm:h-6 ml-2 cursor-pointer"
             />
             <img
               src={cart}
               alt="cart"
-              className="h-6 sm:h-6 ml-2"
+              className="h-6 sm:h-6 ml-2 cursor-pointer"
             />
             <div className="flex items-center">
               <img
                 src={profile}
                 alt="profile"
-                className="h-6 sm:h-10 ml-2 bg-white rounded-full"
+                className="h-6 sm:h-10 ml-2 bg-white rounded-full cursor-pointer"
                 onClick={toggleProfile}
               />
-              <img src={arrowdown} alt="arrowdown" className="h-2 ml-2" />
+              <img src={arrowdown} alt="arrowdown" className="h-2 ml-2 cursor-pointer" />
             </div>
           </div>
 
@@ -75,8 +75,8 @@ const HomeNavBar: React.FC<HomeNavBarProps> = ({ scrollToAbout, scrollToRoutes, 
           </button>
         </div>
         {profileOpen && (
-          <div className='bg-primary absolute w-auto h-44 top-16 right-24 rounded-tl-2xl '>
-            <div className='bg-second h-16 w-auto rounded-tl-2xl flex items-center p-1 gap-1'>
+          <div className='bg-primary absolute w-9/12 md:w-auto h-52 top-24 lg:top-16 right-10 md:right-24 rounded-tl-2xl rounded-tr-2xl'>
+            <div className='bg-second h-16 w-auto rounded-tl-2xl flex items-center p-1 gap-1 rounded-tr-2xl'>
             <img
                 src={profile}
                 alt="profile"
@@ -106,11 +106,11 @@ const HomeNavBar: React.FC<HomeNavBarProps> = ({ scrollToAbout, scrollToRoutes, 
 
         {/* Mobile Navigation (Dropdown links) */}
         {menuOpen && (
-          <div className="lg:hidden absolute flex flex-col right-0 top-16 items-end px-14 py-2  rounded space-y-2 bg-primary text-white">
+          <div className="lg:hidden absolute flex flex-col right-0 top-24 lg:top-16 items-center justify-between px-14 py-2 w-96 h-40  rounded space-y-2 bg-primary text-white">
             <a href="#">Home</a>
-            <a href="#" onClick={scrollToAbout}>About</a>
-            <a href="#" onClick={scrollToRoutes}>Routes</a>
-            <a href="#" onClick={scrollToFaqs}>FAQs</a>
+            <a onClick={scrollToAbout} className='cursor-pointer'>About</a>
+            <a onClick={scrollToRoutes} className='cursor-pointer'>Routes</a>
+            <a onClick={scrollToFaqs} className='cursor-pointer'>FAQs</a>
           </div>
         )}
       </div>
