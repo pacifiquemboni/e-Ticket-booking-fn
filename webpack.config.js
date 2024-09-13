@@ -43,9 +43,10 @@ const config = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              outputPath: 'images',
+              limit: 8192, // Inline images smaller than 8kb
+              name: 'images/[name].[hash:8].[ext]',
             },
           },
         ],
