@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import faqbg from '../../assets/images/faqBg.png';
+import faqbg from '../../assets/images/faqbg.png';
 
 const FAQs = forwardRef<HTMLDivElement>((props, ref) => {
   const [ans1, setAns1] = useState(false);
