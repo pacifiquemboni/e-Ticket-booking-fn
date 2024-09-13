@@ -45,8 +45,8 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192, // Inline images smaller than 8kb
-              name: 'images/[name].[hash:8].[ext]',
+              limit: 8192, // Inline images smaller than 8kb as base64 URIs
+              name: 'images/[name].[hash:8].[ext]', // Output file naming
             },
           },
         ],
