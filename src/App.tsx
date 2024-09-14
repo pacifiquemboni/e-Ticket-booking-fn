@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import HomeNavBar from './components/home/HomeNav';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -14,6 +14,9 @@ import SeatPlan from './components/seatPlan/SeatPlan';
 import SelectSeats from './pages/SelectSeat';
 import ProfileInfo from './components/profile/profileinfo';
 import Profile from './pages/Profile';
+import Login from './components/login/login';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/registerPage';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +26,10 @@ const App: React.FC = () => {
         <Route path="/availableBuses" element={<AvailableBuses />} />
         <Route path="/selectseats" element={<SelectSeats />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
+
       </Routes>
     </Router>
   );

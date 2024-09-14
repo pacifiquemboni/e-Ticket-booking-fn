@@ -9,16 +9,16 @@ const ProfileInfo: React.FC = () => {
   const [isProfile, setIsProfile] = useState(true);
   const [isChangePassword, setIsChangePassword] = useState(false);
   const handleIsProfile = () => {
-setIsProfile(true)
-setIsChangePassword(false)
+    setIsProfile(true);
+    setIsChangePassword(false);
   };
   const handleIsChangePassword = () => {
-    setIsProfile(false)
-    setIsChangePassword(true)
+    setIsProfile(false);
+    setIsChangePassword(true);
   };
   return (
     <>
-      <div className="h-auto w-full mx-5 md:mx-24 md:w-11/12 bg-white rounded rounded-bl-2xl rounded-tr-2xl">
+      <div className="h-auto w-full mx-5 md:mx-24 md:w-11/12 bg-white rounded rounded-bl-2xl rounded-tr-2xl bottom-5 border">
         <h1 className="pt-5  text-primary text-1xl">Profile Information</h1>
         <div className="flex gap-4">
           <img src={profile} alt="" className="w-20 h-20 rounded-full border" />
@@ -45,8 +45,12 @@ setIsChangePassword(false)
 
         <div>
           <div className="flex gap-10 pt-16 mx-5">
-            <p onClick={handleIsProfile} className='cursor-pointer'>Prifile</p>
-            <p onClick={handleIsChangePassword} className='cursor-pointer'>Change Password</p>
+            <p onClick={handleIsProfile} className="cursor-pointer">
+              Prifile
+            </p>
+            <p onClick={handleIsChangePassword} className="cursor-pointer">
+              Change Password
+            </p>
           </div>
           {isProfile && (
             <div className="mx-5 ">
@@ -98,7 +102,7 @@ setIsChangePassword(false)
             </div>
           )}
           {isChangePassword && (
-            <div className="mx-5 ">
+            <div className="mx-5 bottom-5">
               <hr className="w-24 rounded bg-primary h-1 ml-20" />
               <p className="pt-10">Change Password</p>
               <div className="flex flex-col md:flex-row">
