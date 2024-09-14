@@ -10,7 +10,8 @@ export default {
       colors: {
         primary: '#03315D', 
         second: '#124E66',
-        third: '#D9D9D9'
+        third: '#D9D9D9',
+        forth:'#F7F7F7'
       },
       screens: {
         'xs': '480px',   // Custom breakpoint for extra small devices

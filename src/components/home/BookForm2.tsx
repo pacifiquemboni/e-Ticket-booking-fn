@@ -6,6 +6,7 @@ import transfer from '../../assets/images/transfer.png';
 import CustomDatePickerInput from './CustomDatePickerInput';
 import CustomTimePickerInput from './CustomTimePickerInput';
 import { FaLocationArrow } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const BookForm2: React.FC = () => {
   const [date, setDate] = useState<Date | null>(new Date());
@@ -74,9 +75,11 @@ const BookForm2: React.FC = () => {
             } } />}
           />
         </div>
-          <button className="bg-primary text-white w-72 lg:w-2/12 h-12 mt-3 mb-3 lg:ml-2">
-            Search Bus
-          </button>
+        <Link to="/availableBuses" className="bg-primary text-white w-72 lg:w-2/12 h-12 mt-3 mb-3 lg:ml-2 flex justify-center items-center" >
+      
+        Search Bus
+   
+    </Link>
         </form>
       </div>
     </>
