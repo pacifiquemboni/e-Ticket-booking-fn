@@ -34,11 +34,6 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
         </div>
         <div className='flex flex-row justify-between w-full md:w-2/5'>
-          <div>
-        <p className='text-2xl underline'>Resources</p>
-        <p>Login</p>
-        <p>Register</p>
-        </div>
         <div>
         <p className='text-2xl underline'>Contact Us</p>
         <p>Monday - Sunday</p>
@@ -48,6 +43,12 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
         <p>Email</p>
         <p>traveagency@gmail.com</p>
         </div>
+          <div>
+        <p className='text-2xl underline'>Resources</p>
+        <p>Login</p>
+        <p>Register</p>
+        </div>
+        
         </div>
         
       </div>
