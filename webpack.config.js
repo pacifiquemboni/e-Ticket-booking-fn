@@ -2,8 +2,8 @@ import { resolve as _resolve, join } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin'; // Add this import
 
-// ES module replacement for __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -24,20 +24,11 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -59,6 +50,11 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: _resolve(__dirname, 'public/_redirects'), to: _resolve(__dirname, 'dist') }, // Adjusted path
+      ],
     }),
   ],
   devServer: {
