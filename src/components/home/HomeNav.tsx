@@ -9,6 +9,7 @@ import menu from '../../assets/images/Menu.png'
 import ticket from '../../assets/images/ticket.png'
 import user from '../../assets/images/user.png'
 import logout from '../../assets/images/logout.png'
+import { Link } from 'react-router-dom';
 
 interface HomeNavBarProps {
   scrollToAbout: () => void;
@@ -90,11 +91,11 @@ const HomeNavBar: React.FC<HomeNavBarProps> = ({ scrollToAbout, scrollToRoutes, 
             </div>
             <span className='flex  text-white gap-2 mt-3'>
               <img src={ticket} alt="ticket" className="h-6 sm:h-6 ml-8 "/>
-              My Tickets
+             <Link to={''}>My Tickets</Link> 
             </span>
             <span className='flex  text-white gap-2 mt-3'>
               <img src={user} alt="user" className="h-6 sm:h-6 ml-8 "/>
-             Profile
+             <Link to={'/profile'}>Profile</Link>
             </span>
             <span className='flex  text-white gap-2 mt-3'>
               <img src={logout} alt="logout" className="h-6 sm:h-6 ml-8 "/>

@@ -8,14 +8,14 @@ import CustomTimePickerInput from './CustomTimePickerInput';
 import { FaLocationArrow } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const BookForm2: React.FC = () => {
+const UpdateBookForm2: React.FC = () => {
   const [date, setDate] = useState<Date | null>(new Date());
   const [time, setTime] = useState<Date | null>(new Date());
 
   return (
     <>
-      <div className="h-auto w-full md:w-11/12 bg-white rounded rounded-bl-3xl rounded-tr-3xl mx-1">
-        <h1 className="pt-5 ml-8 text-primary text-1xl">Book a Seat Now</h1>
+      <div className="h-auto w-full md:w-11/12 bg-white rounded rounded-bl-2xl rounded-tr-2xl mx-1">
+        <h1 className="pt-5 ml-8 text-primary text-1xl">Change Reservation Details</h1>
         <hr className="w-32 rounded bg-primary p-1 ml-8" />
         <hr />
 
@@ -26,6 +26,7 @@ const BookForm2: React.FC = () => {
           <div className="relative">
             <input
               type="text"
+              defaultValue="Kigali"
               placeholder="Where From?"
               className="border border-primary w-72 lg:w-48   h-12 pl-6"
             />
@@ -42,6 +43,7 @@ const BookForm2: React.FC = () => {
           <div className='relative'>
             <input
             type="text"
+            defaultValue="Rubavu"
             placeholder="Where To?"
             className="border border-primary w-72 lg:w-48 h-12 pl-6"
           />
@@ -86,4 +88,4 @@ const BookForm2: React.FC = () => {
   );
 };
 
-export default BookForm2;
+export default UpdateBookForm2;

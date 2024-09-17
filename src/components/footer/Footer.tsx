@@ -13,8 +13,8 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
           <div>
           <img src={logo} alt="logo" className="h-12 sm:h-14 ml-2 bg-white" />
           <h1 className='text-2xl'>Travel Agency</h1>
-          <p>Kigali-Rwanda</p>
-          <p>07872****1/07299***3</p>
+          <p className='text-xs'>Kigali-Rwanda</p>
+          <p className='text-xs'>07872****1/07299***3</p>
           <div className='bg-primary rounded-2xl flex p-5 w-40 md:w-56 justify-between'>
             <img src={fb} alt="fb" />
             <img src={x} alt="x" />
@@ -26,27 +26,27 @@ const Footer = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
         <div>
           <p className='text-2xl underline'>For Clients</p>
-          <p>About Us</p>
-          <p>How it Works</p>
-          <p>FAQs</p>
-          <p>Contact</p>
-          <p>Our Routes</p>
+          <p className='text-xs'>About Us</p>
+          <p className='text-xs'>How it Works</p>
+          <p className='text-xs'>FAQs</p>
+          <p className='text-xs'>Contact</p>
+          <p className='text-xs'>Our Routes</p>
         </div>
         </div>
         <div className='flex flex-row justify-between w-full md:w-2/5'>
         <div>
         <p className='text-2xl underline'>Contact Us</p>
-        <p>Monday - Sunday</p>
-        <p>08:00 AM - 23:00 PM (CST)</p>
-        <p>HotLine</p>
-        <p>2321</p>
-        <p>Email</p>
-        <p>traveagency@gmail.com</p>
+        <p className='text-xs'>Monday - Sunday</p>
+        <p className='text-xs'>08:00 AM - 23:00 PM (CST)</p>
+        <p className='text-xs'>HotLine</p>
+        <p className='text-xs'>2**1</p>
+        <p className='text-xs'>Email</p>
+        <p className='text-xs'>trav****y@gmail.com</p>
         </div>
           <div>
         <p className='text-2xl underline'>Resources</p>
-        <p>Login</p>
-        <p>Register</p>
+        <p className='text-xs'>Login</p>
+        <p className='text-xs'>Register</p>
         </div>
         
         </div>
