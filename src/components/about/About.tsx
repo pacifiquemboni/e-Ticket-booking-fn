@@ -12,7 +12,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
           <h1 className='pt-10 text-2xl'>About Us</h1>
           <hr className="w-20  bg-primary p-1" />
           <div className="flex flex-col lg:flex-row pt-5 gap-5">
-            <p className="w-fit sm:w-full text-xl ">
+            <p className="w-fit sm:w-full">
               We are a modern travel agency dedicated to providing seamless
               ticket booking through our user-friendly web app. We offer a wide
               range of travel options, including flights, trains, and buses, all
@@ -23,7 +23,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
               experience for all.
             </p>
             <div className="w-fit sm:w-full flex flex-col items-center ">
-              <img src={aboutImg} alt="about image"  className='w-fit sm:w-full h-80 '/>
+              <img src={aboutImg} alt="about image"  className='w-fit sm:w-full h-70 '/>
             </div>
 
             <div className="w-full sm:w-full flex flex-col items-center justify-center ">
