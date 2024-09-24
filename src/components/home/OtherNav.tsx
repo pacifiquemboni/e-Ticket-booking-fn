@@ -88,7 +88,7 @@ const OtherNavBar: React.FC = () => {
             </span>
             <span className='flex  text-white gap-2 mt-3'>
               <img src={user} alt="user" className="h-6 sm:h-6 ml-8 "/>
-             Profile
+              <Link to={'/profile'}>Profile</Link>
             </span>
             <span className='flex  text-white gap-2 mt-3'>
               <img src={logout} alt="logout" className="h-6 sm:h-6 ml-8 "/>
